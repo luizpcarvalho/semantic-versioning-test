@@ -16,11 +16,14 @@ jobs:
       #    echo "GHE_HOST=${GITHUB_SERVER_URL##https:\/\/}" >> $GITHUB_ENV
 
       # Drafts your next Release notes as Pull Requests are merged into "main"
-      - uses: patrickjahns/version-drafter-action@v1
+      - name: calculate next version
         id: version
+        uses: patrickjahns/version-drafter-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: release-drafter/release-drafter@v5
+      - name: tagging and release
+        id: release
+        uses: release-drafter/release-drafter@v5
         # (Optional) specify config name to use, relative to .github/. Default: release-drafter-action.yml
         # with:
         #   config-name: my-config.yml
