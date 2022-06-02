@@ -1,4 +1,0 @@
-major: ['breaking-feature/*', 'breaking-feat/*']
-minor: ['feature/*', 'feat/*']
-patch: fix/*
-chore: chore/*
