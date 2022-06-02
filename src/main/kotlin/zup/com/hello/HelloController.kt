@@ -10,8 +10,8 @@ import io.micronaut.http.annotation.Header
 class HelloController {
 
     @Get
-    fun helloWorld(@Header("name") name: String): MutableHttpResponse<String> {
-        return HttpResponse.ok("Hello $name!")
+    fun helloWorld(@Header("name") name: String, @Header("lastName") lastName: String): MutableHttpResponse<String> {
+        return HttpResponse.ok("Hello $lastName, $name!")
     }
 
 }
