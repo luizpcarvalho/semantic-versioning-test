@@ -23,12 +23,20 @@ jobs:
       #    echo "GHE_HOST=${GITHUB_SERVER_URL##https:\/\/}" >> $GITHUB_ENV
 
       # Drafts your next Release notes as Pull Requests are merged into "master"
+      - name: calculate next version
+        id: version
+        uses: patrickjahns/version-drafter-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: release-drafter/release-drafter@v5
         # (Optional) specify config name to use, relative to .github/. Default: release-drafter-action.yml
         # with:
         #   config-name: my-config.yml
         #   disable-autolabeler: true
         with:
+          version: ${{ format('v{0}', steps.version.outputs.next-version) }}
+          tag: ${{ format('v{0}', steps.version.outputs.next-version) }}
+          name: ${{ format('v{0}', steps.version.outputs.next-version) }}
           publish: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
