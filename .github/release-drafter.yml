@@ -7,14 +7,11 @@ tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: '🚀 Features'
     labels:
-      - 'feat'
-      - 'feature'
-      - 'enhancement'
+      - 'major'
+      - 'minor'
   - title: '🐛 Bug Fixes'
     labels:
-      - 'fix'
-      - 'bugfix'
-      - 'bug'
+      - 'patch'
   - title: '🧰 Maintenance'
     label: 'chore'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
@@ -30,3 +27,19 @@ version-resolver:
     labels:
       - 'patch'
   default: patch
+autolabeler:
+  - label: 'major'
+    title:
+      - '/(breaking|breaking-feature|breaking-feat)\:.+/'
+    body:
+      - '/(breaking|breaking-feature|breaking-feat)\:.+/'
+  - label: 'minor'
+    title:
+      - '/(feature|feat)\:.+/'
+    body:
+      - '/(feature|feat)\:.+/'
+  - label: 'patch'
+    title:
+      - '/(fix|chore)\:.+/'
+    body:
+      - '/(fix|chore)\:.+/'
