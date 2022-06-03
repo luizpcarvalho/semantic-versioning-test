@@ -1,5 +1,5 @@
 template: |
-  ## Changes
+  ## What’s Changed
 
   $CHANGES
 name-template: 'v$RESOLVED_VERSION 🌈'
@@ -27,19 +27,3 @@ version-resolver:
     labels:
       - 'patch'
   default: patch
-autolabeler:
-  - label: 'major'
-    title:
-      - '/(breaking|breaking-feature|breaking-feat)\:.+/'
-    body:
-      - '/(breaking|breaking-feature|breaking-feat)\:.+/'
-  - label: 'minor'
-    title:
-      - '/(feature|feat)\:.+/'
-    body:
-      - '/(feature|feat)\:.+/'
-  - label: 'patch'
-    title:
-      - '/(fix|chore)\:.+/'
-    body:
-      - '/(fix|chore)\:.+/'
