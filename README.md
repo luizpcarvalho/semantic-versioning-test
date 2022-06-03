@@ -1,14 +1,12 @@
-## Micronaut 3.5.0 Documentation
+## POC to implement an automated tag/release cycle, based on PR labels
 
-- [User Guide](https://docs.micronaut.io/3.5.0/guide/index.html)
-- [API Reference](https://docs.micronaut.io/3.5.0/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/3.5.0/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
+POC to implement an automated tag/release cycle, based on PR labels.
+
+Uses:
+
+- [Release Drafter Action](https://github.com/release-drafter/release-drafter): Drafts your next release notes as pull requests are merged into master. Built with Probot.
+- [Version Drafter Action](https://github.com/patrickjahns/version-drafter-action): GitHub Action designed as companion for release-drafter to determine the next semantic version based on the github labels of merged pull requests.
+- [PR Labeler](https://github.com/srvaroa/labeler): Implements a GitHub Action that labels Pull Requests based on configurable conditions.
 ---
-
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
-## Feature http-client documentation
-
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
 
 
