@@ -13,7 +13,7 @@ class HelloController {
 
     @Get
     fun helloWorld(@Header("name") name: String, @Header("lastName") lastName: String): MutableHttpResponse<String> {
-        return HttpResponse.ok("Hello $lastName, $name! Today is ${LocalDate.now(ZoneId.of("America/Sao_Paulo"))}.")
+        return HttpResponse.ok("Hello $lastName, $name! Today is ${LocalDate.now(ZoneId.of("America/Sao_Paulo")).dayOfWeek}.")
     }
 
 }
