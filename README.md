@@ -1,4 +1,4 @@
-## POC to implement an automated tag/release cycle, based on PR labels
+## POC to implement an automated tag/release cycle, based on pull request labels
 
 POC to implement an automated tag/release cycle, based on PR labels.
 
@@ -8,5 +8,3 @@ Uses:
 - [Version Drafter Action](https://github.com/patrickjahns/version-drafter-action): GitHub Action designed as companion for release-drafter to determine the next semantic version based on the github labels of merged pull requests.
 - [PR Labeler](https://github.com/srvaroa/labeler): Implements a GitHub Action that labels Pull Requests based on configurable conditions.
 ---
-
-
