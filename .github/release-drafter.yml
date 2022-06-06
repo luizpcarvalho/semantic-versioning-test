@@ -16,6 +16,7 @@ categories:
   - title: '🧰 Maintenance'
     label:
       - 'chore'
+      - 'doc'
 
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 
@@ -31,6 +32,6 @@ version-resolver:
   patch:
     labels:
       - 'patch'
-
-exclude-labels:
-  - 'skip-changelog'
+      - 'chore'
+      - 'doc'
+  default: patch
