@@ -26,6 +26,6 @@ version-resolver:
   patch:
     labels:
       - 'patch'
-  default: patch
+  # default: patch
 exclude-labels:
   - 'no-release'
